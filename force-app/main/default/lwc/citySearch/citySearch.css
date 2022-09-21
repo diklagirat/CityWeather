@@ -1,0 +1,64 @@
+:host .slds-form-element__group {
+    --lwc-fontSize3: 12rem;
+}
+body {
+    margin: 0;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.25rem;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    margin: auto;
+
+    border-radius: 5px;
+    padding: 17px 16px 16px 19px;
+    box-shadow: 0 0 12px 0 rgb(0 0 0 / 20%);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.header {
+    height: 50px;
+    background: rgb(255, 255, 255);
+    color: rgb(46, 46, 46);
+    font-size: x-large;
+    padding: 10px;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex: 1;
+    background: rgb(249, 252, 252);
+    color: #000;
+    padding: 30px;
+}
+.content-container{
+    display: flex;
+    width: 800px;
+}
+
+.search-container{
+    width: 400px;
+}
+.weather-container{
+    margin-left: 30px;
+    width: 400px;
+}
+/* lightning-input-address .slds-form-element__control{
+    color: rgb(255, 0, 208);
+    display: none;
+} */
+lightning-input-address {
+    color: rgb(3, 4, 4);
+}
+.card {
+    border-radius: 5px;
+    padding: 17px 16px 16px 19px;
+    box-shadow: 0 0 12px 0 rgb(0 0 0 / 20%);
+    min-height: 100px;
+    background-color: steelblue;
+}

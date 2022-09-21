@@ -1,0 +1,26 @@
+<template>
+        <div class="wrapper">
+            <header class="header">City Weather</header>
+            <section class="content">
+                <div class="content-container card">
+                    <main class="search-container">
+                        <lightning-input-address
+                                address-lookup-placeholder="Please enter city..."
+                                street-label="Street"
+                                city-label='City'
+                                country-label="Country"
+                                province-label="State"
+                                postal-code-label="Zip Code"
+                                city={city}
+                                show-address-lookup
+                                onchange={handleChangeCity}
+                            >
+                            </lightning-input-address>
+                    </main>
+                    <main class="weather-container">
+                            <c-weather-api city={city}></c-weather-api>
+                    </main>
+                </div>
+            </section>
+        </div>
+</template>
