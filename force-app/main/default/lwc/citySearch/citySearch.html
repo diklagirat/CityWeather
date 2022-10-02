@@ -1,11 +1,20 @@
 <template>
-        <div class="wrapper">
-            <header class="header">City Weather</header>
-            <section class="content">
-                <div class="content-container card">
-                    <main class="search-container">
-                        <lightning-input-address
-                                address-lookup-placeholder="Please enter city..."
+    <div class="slds-m-bottom_medium">
+        <lightning-card>
+            <c-weather-api city={city}></c-weather-api>
+        </lightning-card>
+    </div>
+    <lightning-card  class="slds-m-bottom_medium">
+        <div class="slds-p-horizontal_medium ">
+            <lightning-combobox name="city" label="City List" 
+                                value={value}
+                                placeholder="Select City"
+                                options={cityOptions} 
+                                onchange={handleChangeCityList}>
+            </lightning-combobox>
+            <p if:true={city}>Selected city is: {value}</p>
+            <lightning-input-address
+                                address-lookup-placeholder="Enter city"
                                 street-label="Street"
                                 city-label='City'
                                 country-label="Country"
@@ -13,14 +22,8 @@
                                 postal-code-label="Zip Code"
                                 city={city}
                                 show-address-lookup
-                                onchange={handleChangeCity}
-                            >
-                            </lightning-input-address>
-                    </main>
-                    <main class="weather-container">
-                            <c-weather-api city={city}></c-weather-api>
-                    </main>
-                </div>
-            </section>
+                                onchange={handleChangeCity}>
+            </lightning-input-address>
         </div>
+    </lightning-card>               
 </template>
